@@ -102,7 +102,7 @@ And now you are ready to submit jobs to the Grid! Or copy data from and to the G
 Describe your job in a JDL file
 ===============================
 
-To submit a Grid job you must describe this in a plain text file, in what is called :abbr:`JDL (Job Description Language)`. Optionally, you can check the Computing Elements (CEs) that this job may run on. The JDL file will pass the details of your job to the :abbr:`WMS (Workload Management System)`.
+To submit a Grid job you must describe this in a plain text file :abbr:`JDL (Job Description Language)`. Optionally, you can check the Computing Elements (CEs) that this job may run on. The JDL file will pass the details of your job to the :abbr:`WMS (Workload Management System)`.
 
 .. warning:: Make sure you have started your session and created already a :ref:`valid proxy <startgridsession>`. 
 
