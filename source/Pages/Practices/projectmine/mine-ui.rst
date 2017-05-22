@@ -28,7 +28,7 @@ Please note that this will only copy the data files from your home folder. You c
 
 .. code-block:: console
    
-   $rsync -a maithilk@ui.grid.sara.nl:/home/maithilk/.globus/ /home/maithilk/migrate/.globus
+   $rsync -a user@ui.grid.sara.nl:/home/user/.globus/ /home/user/.globus
 
 4. Software environment set-up on the Project_MinE user interface and ui.grid.sara.nl are similar. Access to the softdrive.nl service is also availabe from the MinE user interface through the same path viz. /cvmfs/softdrive.nl/. Grid tools that were available on the ui.grid.sara.nl (e.g., glite-* tools, storage clients, etc.) are also availabe on the Mine user interface. 
 
