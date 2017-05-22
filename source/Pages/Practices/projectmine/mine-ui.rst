@@ -22,8 +22,12 @@ If you were accessing the Grid facility at SURFsara via the grid user interface 
 
 .. code-block:: console
 
-   $scp -r user@ui.grid.sara.nl:/home/user/* .  # replace user with your username 
-Please note that this will only copy the data files from your home folder. If you wish to replicate all the files from your ui.grid.sara.nl
+   $rsync -a --exclude='.*' user@ui.grid.sara.nl:/home/user/ /home/user/   # replace user with your username 
+
+Please note that this will only copy the data files from your home folder. You can copy the .globus folder which contains the grid certificate and key with the following command:
+
+.. code-block:: console
+   $rsync -a maithilk@ui.grid.sara.nl:/home/maithilk/.globus/ /home/maithilk/migrate/.globus
 
 4. Software environment set-up on the Project_MinE user interface and ui.grid.sara.nl are similar. Access to the softdrive.nl service is also availabe from the MinE user interface through the same path viz. /cvmfs/softdrive.nl/. Grid tools that were available on the ui.grid.sara.nl (e.g., glite-* tools, storage clients, etc.) are also availabe on the Mine user interface. 
 
