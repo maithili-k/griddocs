@@ -50,7 +50,7 @@ If you were accessing the Grid facility at SURFsara via the grid user interface 
 
    $rsync -a user@ui.grid.sara.nl:/home/user/ /home/user/   # replace user with your username 
 
-This will replicate all your files on the Mine user interface. 
+This will replicate all your files in the home folder on the Mine user interface. 
 
 4. The software environment set-up on the Project_MinE user interface and ui.grid.sara.nl are similar. Access to Softdrive is also availabe from the MinE user interface through the same path viz. /cvmfs/softdrive.nl/. Grid tools that were available on the ui.grid.sara.nl (e.g., glite-* tools, storage clients, etc.) are also availabe on the Mine user interface. 
 
