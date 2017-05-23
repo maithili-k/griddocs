@@ -54,9 +54,11 @@ However, to transfer the data to and from the grid storage and run the analysis,
 
 will fail. You can find the information on interacting with grid here http://doc.grid.surfsara.nl/en/latest/index.html
 
+2. Additional /scratch space: For the users who wish to upload data to the project but do not have access to a certificate can upload the data to /scratch. The Project_Mine data managers will co-ordinate with those users and transfer the data to the grid storage which can then be accessed via the NFS mount. Please note that the data on /scratch space cannot be directly used for analysis, but needs to be uploaded to the grid storage first. 
+
 ==============
 Guidelines for Mine user interface:
 ==============
 
-Security of the data is of utmost importance, so of course only the users we provide access to for specific countries will be able to access that data. Hence, the responsibility also lies with the user to not share their private ssh key with anyone. Violation of this will lead to revocation of the user's access from the Mine user interface.
+Security of the data is of utmost importance, so of course only the users we provide access to for specific countries will be able to access that data. Hence, the responsibility also lies with the user to not share their private ssh key with anyone. Violation of this will lead to revocation of the user's access to the Mine user interface.
 
