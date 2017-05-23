@@ -30,7 +30,33 @@ Please note that this will only copy the data files from your home folder. You c
    
    $rsync -a user@ui.grid.sara.nl:/home/user/.globus/ /home/user/.globus
 
-4. Software environment set-up on the Project_MinE user interface and ui.grid.sara.nl are similar. Access to the softdrive.nl service is also availabe from the MinE user interface through the same path viz. /cvmfs/softdrive.nl/. Grid tools that were available on the ui.grid.sara.nl (e.g., glite-* tools, storage clients, etc.) are also availabe on the Mine user interface. 
+4. Software environment set-up on the Project_MinE user interface and ui.grid.sara.nl are similar. Access to the Softdrive is also availabe from the MinE user interface through the same path viz. /cvmfs/softdrive.nl/. Grid tools that were available on the ui.grid.sara.nl (e.g., glite-* tools, storage clients, etc.) are also availabe on the Mine user interface. 
 
-5. Please remember to 
+===============
+Additional features on Mine user interface
+===============
+
+So why did we switch from the grid user interface to the Mine user interface? Mine user interface has two additional features:
+
+1. An NFS (Network File System) mount: An NFS mount is present on the Mine user interface which allows the users read-only access to the ProjectMine data without a grid certificate! You can list the files with the following commands:
+
+.. code-block:: console
+   
+   $ls /projectmine-nfs/
+   Disk/   illumina_upload/  Tape/   upload/   
+
+However, to transfer the data to and from the grid storage and run the analysis, please note that you *have* to use the storage clients. So commands such as:
+
+.. code-block:: console
+   
+   $cp test /projectmine-nfs/
+   cp: cannot create regular file `/projectmine-nfs/test': Read-only file system
+
+will fail. You can find the information on interacting with grid here http://doc.grid.surfsara.nl/en/latest/index.html
+
+==============
+Guidelines for Mine user interface:
+==============
+
+Security of the data is of utmost importance, so of course only the users we provide access to for specific countries will be able to access that data. Hence, the responsibility also lies with the user to not share their private ssh key with anyone. Violation of this will lead to revocation of the user's access from the Mine user interface.
 
