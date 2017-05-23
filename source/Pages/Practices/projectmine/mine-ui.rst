@@ -45,7 +45,7 @@ So why did we switch from the grid user interface to the Mine user interface? Mi
    $ls /projectmine-nfs/
    Disk/   illumina_upload/  Tape/   upload/   
 
-However, to transfer the data to and from the grid storage and run the analysis, please note that you **have** to use the storage clients. So commands such as:
+However, to transfer the data to and from the grid storage and run the analysis, please note that you **have** to use the grid specific tools. So commands such as:
 
 .. code-block:: console
    
