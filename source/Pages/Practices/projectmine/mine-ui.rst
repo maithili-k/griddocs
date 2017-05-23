@@ -59,5 +59,5 @@ This will replicate all your files in the home folder on the Mine user interface
 Guidelines for Mine user interface:
 ==============
 
-Security of the data is of utmost importance, so of course only the users we provide access to for specific countries will be able to access that data. Hence, the responsibility also lies with the user to not share their private ssh key and the passphrase with anyone. Violation of this will lead to revocation of the user's access to the Mine user interface.
+Security of the data is of utmost importance, so of course only the users we provide access to for specific countries will be able to access that data. However, the responsibility also lies with the user to not share their private ssh key and the passphrase with anyone. Violation of this will lead to revocation of the user's access to the Mine user interface.
 
