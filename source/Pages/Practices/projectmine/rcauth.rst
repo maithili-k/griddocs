@@ -23,13 +23,13 @@ How to use RCAuth
 SURFsara will provide entitlement to enable existing users to use this service. Future incoming users will be automatically  provided with this entitlement when their accounts are created. 
 
 * Create a RCauth proxy
-Similar to creating a proxy based on the certificate, you can create a proxy by runing the following command:
+Similar to creating a proxy based on the certificate, you can create a proxy by running the following command:
 
  .. code-block:: console
 
      $startGridSessionRCauth lsgrid:/lsgrid/Project_MinE 
      
-This will promt you for the following response:
+This will prompt you for the following response:
 
  .. code-block:: console
 
@@ -53,7 +53,7 @@ You need to login with the username and password (the same credentials that prov
 .. image:: rcauth-consent.png
 	:align: center
 
-Please click remember me (so you will not be asked again) and yes which will proceed to the following page:
+Please check remember (so you will not be asked again) and click yes to proceed to the following page:
 
 .. image:: rcauth-hash.png
 	:align: center
@@ -67,7 +67,7 @@ Copy-paste this 'hash' on the mine-ui which will generate a local proxy (valid f
      authenticate. Select the 'Research and e-Infrastructures' tab and then 'SURFsara CUA'.
 
     Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/.   
-    e34b93dba5cac3ea9687207620f7056bca4ae3212a98aa799d3fd84e757c5ceb
+    aa54041e530c2b77521ad60d6a0ded0190dffc2be521e84477aa1c18dc6fcf8d
 
     Two VOMS proxies have been created:
     - One valid for 7 days, uploaded to the MyProxy server px.grid.sara.nl.
@@ -79,7 +79,7 @@ This proxy is similar in nature to the proxy created from a grid certificate. Th
 * Renewing a proxy
 Please note that the local proxy (/tmp/x509_uxxxxx) is valid only for 24 hours. If you submit jobs from the mine-ui or interact with dCache using the storage clients, make sure the proxy is still valid. If it has expired or will expire sooner than the expected runtime of the jobs you can rerun all the commands above to create a new proxy. A new hash will be generated each time, so you cannot reuse the earlier one. 
 
-If you are submitting jobs with the Picas workflow/other workflows the proxy on the myproxy server is valid for 7 days. You should login to the mine-ui and run the above acommands again to renew the proxy also on the myproxy server.
+If you are submitting jobs with the Picas workflow/other workflows the proxy on the myproxy server is valid for 7 days. You should login to the mine-ui and run the above commands again to renew the proxy also on the myproxy server.
 
 * Other points to note
 
@@ -87,5 +87,5 @@ If you are submitting jobs with the Picas workflow/other workflows the proxy on 
 
 2. RCauth proxy is only enabled for ProjectMinE. If you are involved in other grid projects, you will still need to use the grid certificate.
 
-3. The grid certificate uploaded to a web browser provides you access to several EGI websites e.g., https://goc.egi.eu/portal/ where downtimes on several sites can be tracked.  
+3. The grid certificate uploaded to a web browser provides you access to several EGI websites e.g., https://goc.egi.eu/portal/ where downtimes on several sites can be tracked. Without the grid certificate, you cannot access these sites anymore. However, you can track the downtimes of sites associated with SURFsara where the project has resource allocation here - http://web.grid.sara.nl/cgi-bin/eInfra.py
 
