@@ -33,9 +33,12 @@ This will promt you for the following response:
 
  .. code-block:: console
 
-    Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/. 
+    Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/ 
 
 From a browser please proceed to the above link. You will be directed to the following page:
+
+.. image:: /Images/digicert_install_cert.png
+	:align: center
 
 Click on the start button upon which you will be redirected to the following pages for agreeing to the user terms and conditions. Please click yes and remember me (so you will not be asked again) and proceed till you reach the following page:
 
