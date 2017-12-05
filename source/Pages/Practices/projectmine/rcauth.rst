@@ -35,7 +35,10 @@ This will promt you for the following response:
 
     Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/. 
 
-     
+From a browser please proceed to the above link. You will be directed to the following page:
+
+Click on the start button upon which you will be redirected to the following pages for agreeing to the user terms and conditions. Please click yes and remember me (so you will not be asked again) and proceed till you reach the following page:
+
 
 
 If you already have a grid certificate, you may still continue to use it.
