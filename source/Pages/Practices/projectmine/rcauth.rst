@@ -89,3 +89,5 @@ If you are submitting jobs with the Picas workflow/other workflows the proxy on 
 
 3. The grid certificate uploaded to a web browser provides you access to several EGI websites e.g., https://goc.egi.eu/portal/ where downtimes on several sites can be tracked. Without the grid certificate, you cannot access these sites anymore. However, you can track the downtimes of sites associated with SURFsara where the project has resource allocation here - http://web.grid.sara.nl/cgi-bin/eInfra.py
 
+4. The proxy creation with grid certificate and RCauth create the local proxy file with the same name (/tmp/x509_uxxxxx). if you created the proxy with one method but wish to switch to the other method, you need to manually remove this proxy file in the /tmp folder. 
+
