@@ -35,13 +35,57 @@ This will promt you for the following response:
 
     Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/ 
 
-From a browser please proceed to the above link. You will be directed to the following page:
+From a web browser please proceed to the above link (If you are logging into the mine-ui from a remote server which does not allow X-forwarding, you can also open the link with a browser from your laptop/desktop) You will be directed to the following page:
 
-.. image:: /Images/digicert_install_cert.png
+.. image:: rcauth-portal.png
 	:align: center
 
-Click on the start button upon which you will be redirected to the following pages for agreeing to the user terms and conditions. Please click yes and remember me (so you will not be asked again) and proceed till you reach the following page:
+Click on the start button upon which you will be redirected to the SURFsara portal. 
 
+.. image:: surfsara-portal.png
+	:align: center
 
+You need to login with the username and password (the same credentials that provide you access to the SURFsara user portal https://portal.surfsara.nl/home). Once you enter the correct credentials you will be redirected to the following pages for agreeing to the terms and conditions. 
 
-If you already have a grid certificate, you may still continue to use it.
+.. image:: consent-personal-info.png
+	:align: center
+	
+.. image:: rcauth-consent.png
+	:align: center
+
+Please click remember me (so you will not be asked again) and yes which will proceed to the following page:
+
+.. image:: rcauth-hash.png
+	:align: center
+
+Copy-paste this 'hash' on the mine-ui which will generate a local proxy (valid for 24 hours) stored on the mine-ui and a proxy with correct voms attributes on the myproxy server (valid for 7 days).
+
+ .. code-block:: console
+
+     $startGridSessionRCauth lsgrid:/lsgrid/Project_MinE 
+     You don't have X forwarding enabled. Please go with your browser to https://rcdemo.nikhef.nl/projectmine/?role= to     
+     authenticate. Select the 'Research and e-Infrastructures' tab and then 'SURFsara CUA'.
+
+    Please enter the authentication hash that you retrieved from https://rcdemo.nikhef.nl/projectmine/.   
+    e34b93dba5cac3ea9687207620f7056bca4ae3212a98aa799d3fd84e757c5ceb
+
+    Two VOMS proxies have been created:
+    - One valid for 7 days, uploaded to the MyProxy server px.grid.sara.nl.
+    - One valid for 24 hours, downloaded to /tmp/x509up_uxxxxx.
+    Your delegation ID is: userid
+
+This proxy is similar in nature to the proxy created from a grid certificate. The details of the purpose of the proxy, how to retrieve information about the proxy, etc. can be found on the link here - http://doc.grid.surfsara.nl/en/latest/Pages/Advanced/grid_authentication.html
+
+* Renewing a proxy
+Please note that the local proxy (/tmp/x509_uxxxxx) is valid only for 24 hours. If you submit jobs from the mine-ui or interact with dCache using the storage clients, make sure the proxy is still valid. If it has expired or will expire sooner than the expected runtime of the jobs you can rerun all the commands above to create a new proxy. A new hash will be generated each time, so you cannot reuse the earlier one. 
+
+If you are submitting jobs with the Picas workflow/other workflows the proxy on the myproxy server is valid for 7 days. You should login to the mine-ui and run the above acommands again to renew the proxy also on the myproxy server.
+
+* Other points to note
+
+1. If you already have a grid certificate, you may still continue to use it.
+
+2. RCauth proxy is only enabled for ProjectMinE. If you are involved in other grid projects, you will still need to use the grid certificate.
+
+3. The grid certificate uploaded to a web browser provides you access to several EGI websites e.g., https://goc.egi.eu/portal/ where downtimes on several sites can be tracked.  
+
