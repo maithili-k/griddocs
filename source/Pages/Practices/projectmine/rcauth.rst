@@ -7,8 +7,8 @@ RCauth on Project_MinE User Interface
 ===============
 RCauth authentication
 ===============
-Users need a personal X509 grid certificate to access the grid and data storage at SURFsara. Each country may have a central Certificate Authority 
-(CA) or multiple CAs, and the CAs may also support Universities from different countries. However, as this process is decentralized
+Users need a personal X509 grid certificate to access the grid and data storage at SURFsara. Each country may have a national Certificate Authority 
+(CA) or multiple CAs which support only some Universities/Research Institutes. However, as this process is decentralized
 and every country may not have a CA, this can cause delays for users to get a certificate. The NFS mount service on the mine user interface 
 enabled users to copy data from dCache to their local site without a certificate, however these users could not use grid storage clients for more efficient data transfers or run their analyses on the grid.
 
